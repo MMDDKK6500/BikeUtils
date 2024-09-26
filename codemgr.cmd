@@ -7,7 +7,6 @@ if "%~1"=="" goto help
 
 if "%~1"=="-h" goto help
 
-if "%~1"=="check" goto check
 if "%~1"=="build" goto build
 if "%~1"=="clean" goto clean
 if "%~1"=="commit" goto commit
@@ -21,12 +20,7 @@ echo:
 echo Commands available:
 echo    build   Will run the build.cmd script(runs check.cmd)
 echo    clean   Will run the dotnet clean command
-echo    check   Will check the includes for the latest update
 echo    commit  Will stage, commit and push every change into github!
-goto end
-
-:check
-call scripts/check.cmd
 goto end
 
 :build
