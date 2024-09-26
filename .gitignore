@@ -421,4 +421,7 @@ obj/
 .history
 .ionide
 
+# include files for SCPSL and plugin dependencies
+include/
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,csharp,dotnetcore

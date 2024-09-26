@@ -1,9 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net48</TargetFramework>
     <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <LangVersion>10</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(EXILED_REFERENCES)\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>$(EXILED_REFERENCES)\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(EXILED_REFERENCES)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EXILEDOFFICIAL" Version="8.12.2" />
+  </ItemGroup>
 
 </Project>
