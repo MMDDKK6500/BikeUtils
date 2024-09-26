@@ -6,8 +6,15 @@ using Mirror;
 using PlayerRoles;
 
 
-public class NPCUtils
+public static class NPCUtils
 {
+    //Need to clean this up but I'm lazy, Bicicleta will fix it later lolzzz
+    /// <summary>
+    /// Spawns a Dummy
+    /// </summary>
+    /// <param name="role">The <see cref="RoleTypeId"/> that the dummy will have.</param>
+    /// <param name="name">The name for the dummy.</param>
+    /// <returns>Returns a <see cref="ReferenceHub"/> for the spawned dummy.</returns>
     public static ReferenceHub SpawnDummy(RoleTypeId role, string name)
     {
 
