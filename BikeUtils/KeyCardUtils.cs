@@ -7,19 +7,22 @@ using Exiled.API.Features;
 
 public class KeyCardUtils
 {
-
+    //função que vai rodar uma secagem de item do player
     public static ItemType? GetBestCardInInventory(Player player)
     {
+        //filtra os itens e organiza do maior numero para o menor
         var keycards = player.Items
             .Where(item => (int)item.Type >= (int)ItemType.KeycardJanitor && (int)item.Type <= (int)ItemType.KeycardO5)
             .Select(item => item.Type)
             .OrderByDescending(item => (int)item)
             .ToList();
 
+        //checa se a lista keycards tem um valor //pega a primeira variavel dessa lista
         if (keycards.Any()) return (ItemType?)keycards.FirstOrDefault();
         return null;
     }
 
+    //atualiza as informações do cartão, comparando o tipo do cartão e definindo seu nivel de acesso!!!
     public static KeyCardPerms UpdateInfo(KeyCardPerms thisKeyInfo, ItemType? itemType)
     {
         switch (itemType)
@@ -40,12 +43,15 @@ public class KeyCardUtils
         return thisKeyInfo;
     }
 
+    //checagem da permissão do tipo KeyCardPermission que ele ta interagindo junto com o player, para fazer a chacagem dos itens e converter ele em uma informação mais usavel
     public static bool CanPlayerOpen(Player player, KeycardPermissions requiredPermissions)
     {
         bool podeAbrir = false;
         var keycards = player.Items.Where(item => (int)item.Type >= (int)ItemType.KeycardJanitor && (int)item.Type <= (int)ItemType.KeycardO5).Select(item => item.Type);
+        //loop pra cada cartão que o player tiver
         foreach (var keycard in keycards)
         {
+                                             //struct do KeyCardPerms//cartão atual do foreach
             KeyCardPerms theKeyInfo = UpdateInfo(new KeyCardPerms(), keycard);
             if (requiredPermissions.HasFlag(KeycardPermissions.Checkpoints)) if (theKeyInfo.Checkpoint) podeAbrir = true; else { podeAbrir = false; continue; }
             if (requiredPermissions.HasFlag(KeycardPermissions.ExitGates)) if (theKeyInfo.Gate) podeAbrir = true; else { podeAbrir = false; continue; }
@@ -59,6 +65,7 @@ public class KeyCardUtils
             if (requiredPermissions.HasFlag(KeycardPermissions.ArmoryLevelThree)) if (theKeyInfo.Armory_Access >= 3) podeAbrir = true; else { podeAbrir = false; continue; }
 
             if (podeAbrir) break;
+            //aqui ele para automaticamente caso o valor final for true, pq ai n precisa mais checar pq um cartão ja passou!!!
         }
         return podeAbrir;
     }
