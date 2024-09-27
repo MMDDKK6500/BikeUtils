@@ -7,7 +7,7 @@ namespace BikeUtils;
 public static class RoleClassUtils
 {
     /// <summary>
-    /// Gets the player's tag color
+    /// Gets the player's tag color.
     /// </summary>
     /// <param name="player">The <see cref="Player"/> you want to get the color.</param>
     /// <returns>Returns astring with the player color in a #000000 HEX fromat or #FFFFFF if not found.</returns>
@@ -52,10 +52,10 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Gets a string and checks if it is a valid playable SCP number
+    /// Gets a string and checks if it is a valid playable SCP number.
     /// </summary>
-    /// <param name="number">The SCP number, in a string format</param>
-    /// <returns>Returns the <see cref="RoleTypeId"/> of the SCP, or Spectator if not an SCP</returns>
+    /// <param name="number">The SCP number, in a string format.</param>
+    /// <returns>Returns the <see cref="RoleTypeId"/> of the SCP, or Spectator if not an SCP.</returns>
     public static RoleTypeId StringToSCPRole(string number)
     {
         return number switch
@@ -72,10 +72,10 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Checks if the given <see cref="RoleTypeId"/> is an SCP Role
+    /// Checks if the given <see cref="RoleTypeId"/> is an SCP Role.
     /// </summary>
-    /// <param name="role"><see cref="RoleTypeId"/> that you want to see if it is an SCP Role</param>
-    /// <returns>True if <see cref="RoleTypeId"/> is an SCP role or false if <see cref="RoleTypeId"/> is not an SCP role</returns>
+    /// <param name="role"><see cref="RoleTypeId"/> that you want to see if it is an SCP Role.</param>
+    /// <returns>True if <see cref="RoleTypeId"/> is an SCP role or false if <see cref="RoleTypeId"/> is not an SCP role.</returns>
     public static bool ScpRoles(RoleTypeId role)
     {
         return role == RoleTypeId.Scp049 ||
@@ -88,10 +88,10 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Gets a <see cref="RoleTypeId"/> and returns what color it should be
+    /// Gets a <see cref="RoleTypeId"/> and returns what color it should be.
     /// </summary>
-    /// <param name="roleType">The RoleTypeId you want the color of</param>
-    /// <returns>A string with the HEX color in the #000000 format</returns>
+    /// <param name="roleType">The RoleTypeId you want the color of.</param>
+    /// <returns>A string with the HEX color in the #000000 format.</returns>
     public static string GetRoleColor(RoleTypeId roleType)
     {
         return roleType switch
@@ -113,13 +113,13 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Gets a <see cref="Color">Unity Color</see> and transforms it into HEX
+    /// Gets a <see cref="Color">Unity Color</see> and transforms it into HEX.
     /// </summary>
-    /// <param name="color"><see cref="Color">Unity Color</see> object</param>
-    /// <param name="boostR">Red color boost</param>
-    /// <param name="boostG">Green color boost</param>
-    /// <param name="boostB">Blue color boost</param>
-    /// <returns>A string with the HEX color in the #000000 format</returns>
+    /// <param name="color"><see cref="Color">Unity Color</see> object.</param>
+    /// <param name="boostR">Red color boost.</param>
+    /// <param name="boostG">Green color boost.</param>
+    /// <param name="boostB">Blue color boost.</param>
+    /// <returns>A string with the HEX color in the #000000 format.</returns>
     public static string UnityColorToHex(Color color, float boostR = 0f, float boostG = 0f, float boostB = 0f)
     {
         return $"#{Mathf.FloorToInt(Mathf.Clamp01(color.r+boostR)*255):X2}{Mathf.FloorToInt(Mathf.Clamp01(color.g+boostG)*255):X2}{Mathf.FloorToInt(Mathf.Clamp01(color.b+boostB)*255):X2}";

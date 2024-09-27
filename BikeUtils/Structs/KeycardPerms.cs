@@ -1,9 +1,9 @@
 namespace BikeUtils.Structs;
 
 /// <summary>
-/// Keycard permissions
+/// Keycard permissions.
 /// </summary>
-public struct KeyCardPerms
+public struct KeycardPerms
 {
     /// <summary>
     /// Containment level of the keycard, goes from 1 to 3.
@@ -39,7 +39,7 @@ public struct KeyCardPerms
     /// <param name="warhead"></param>
     /// <param name="checkpoint"></param>
     /// <param name="intercom"></param>
-    internal KeyCardPerms(int containment = 0, int armory_access = 0, bool gate = false, bool warhead = false, bool checkpoint = false, bool intercom = false)
+    internal KeycardPerms(int containment = 0, int armory_access = 0, bool gate = false, bool warhead = false, bool checkpoint = false, bool intercom = false)
     {
         Containment = containment;
         Armory_Access = armory_access;
