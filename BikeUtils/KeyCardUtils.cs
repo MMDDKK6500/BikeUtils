@@ -40,7 +40,7 @@ public class KeyCardUtils
         return thisKeyInfo;
     }
 
-    public static bool PlayerCanOpen(Player player, KeycardPermissions requiredPermissions)
+    public static bool CanPlayerOpen(Player player, KeycardPermissions requiredPermissions)
     {
         bool podeAbrir = false;
         var keycards = player.Items.Where(item => (int)item.Type >= (int)ItemType.KeycardJanitor && (int)item.Type <= (int)ItemType.KeycardO5).Select(item => item.Type);

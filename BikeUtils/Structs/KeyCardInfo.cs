@@ -3,14 +3,14 @@ namespace BikeUtils.Structs;
 public struct KeyCardPerms
 {
 
-    public int Containment { get; set; } = 0;
-    public int Armory_Access { get; set; } = 0;
-    public bool Gate { get; set; } = false;
-    public bool Warhead { get; set; } = false;
-    public bool Checkpoint { get; set; } = false;
-    public bool Intercom { get; set; } = false;
+    public int Containment;
+    public int Armory_Access;
+    public bool Gate;
+    public bool Warhead;
+    public bool Checkpoint;
+    public bool Intercom;
 
-    internal KeyCardPerms(int containment, int armory_access, bool gate, bool warhead, bool checkpoint, bool intercom)
+    internal KeyCardPerms(int containment = 0, int armory_access = 0, bool gate = false, bool warhead = false, bool checkpoint = false, bool intercom = false)
     {
         Containment = containment;
         Armory_Access = armory_access;
