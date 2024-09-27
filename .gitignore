@@ -425,4 +425,3 @@ obj/
 include/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,csharp,dotnetcore
-/BikeUtils/BikeUtils.csproj
