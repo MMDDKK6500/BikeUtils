@@ -3,10 +3,20 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <Nullable>enable</Nullable>
-    <OutputType>Library</OutputType>
     <LangVersion>10</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.0-alpha1</Version>
+    <Authors>MMDDKK6500, Bicicleta</Authors>
+
+    <Copyright>Copyright © $(Authors) 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/MMDDKK6500/BikeUtils</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MMDDKK6500/BikeUtils</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
