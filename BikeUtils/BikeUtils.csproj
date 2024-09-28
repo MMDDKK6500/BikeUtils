@@ -9,10 +9,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>MMDDKK.BikeUtils</PackageId>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.0-beta1</Version>
+    <PackageId>BikeUtils</PackageId>
+    <PackageVersion>1.0.0-beta1</PackageVersion>
     <Authors>MMDDKK6500, Bicicleta</Authors>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <PackageReadmeFile>..\README.md</PackageReadmeFile>
 
     <Copyright>Copyright © $(Authors) 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
     <RepositoryType>git</RepositoryType>
@@ -48,6 +49,10 @@
 
   <ItemGroup>
     <PackageReference Include="EXILEDOFFICIAL" Version="8.12.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="..\"/>
   </ItemGroup>
 
 </Project>
