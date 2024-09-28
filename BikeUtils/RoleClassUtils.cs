@@ -50,11 +50,11 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Gets a string or int and checks if it is a valid playable SCP number.
+    /// Gets a string and checks if it is a valid playable SCP number.
     /// </summary>
-    /// <param name="number">The SCP number, in a string or int format.</param>
+    /// <param name="number">The SCP number, in string format.</param>
     /// <returns>Returns the <see cref="RoleTypeId"/> of the SCP, or Spectator if not an SCP.</returns>
-    public static RoleTypeId VarToSCPRole(string number)
+    public static RoleTypeId GetSCPRole(string number)
     {
         return number switch
         {
@@ -68,7 +68,13 @@ public static class RoleClassUtils
             _ => RoleTypeId.Spectator,
         };
     }
-    public static RoleTypeId VarToSCPRole(int number)
+
+    /// <summary>
+    /// Gets an int and checks if it is a valid playable SCP number.
+    /// </summary>
+    /// <param name="number">The SCP number, in an int format.</param>
+    /// <returns>Returns the <see cref="RoleTypeId"/> of the SCP, or Spectator if not an SCP.</returns>
+    public static RoleTypeId GetSCPRole(int number)
     {
         return number switch
         {
