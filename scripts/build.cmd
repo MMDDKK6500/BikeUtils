@@ -3,13 +3,19 @@ SETLOCAL
 
 REM call scripts/check.cmd
 
+if "%ARG%"=="" goto debug 
 
-dotnet clean
-dotnet build
+:build
+dotnet clean -c %ARG%
+dotnet build -c %ARG%
 if not exist bin mkdir bin
-copy BikeUtils\bin\Debug\net48\BikeUtils.dll bin\BikeUtils.dll
-echo Copied all compiled DLLs into bin folder!
+REM copy BikeUtils\bin\Debug\net48\BikeUtils.dll bin\BikeUtils.dll
+REM echo Copied all compiled DLLs into bin folder!
 goto end
+
+:debug
+set ARG="debug"
+goto build
 
 :invalid
 echo Invalid configuration

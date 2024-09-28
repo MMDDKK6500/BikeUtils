@@ -5,11 +5,13 @@
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>$(MSBuildThisFileDirectory)\..\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup>
+    <PackageId>MMDDKK.BikeUtils</PackageId>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.0-alpha1</Version>
+    <Version>1.0.0-beta1</Version>
     <Authors>MMDDKK6500, Bicicleta</Authors>
 
     <Copyright>Copyright © $(Authors) 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
@@ -20,8 +22,16 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>True</Optimize>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DebugType>Portable</DebugType>
+  </PropertyGroup>
+
+  <!-- Disable warning about disabled generation of xml files on debug build -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);SA0001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

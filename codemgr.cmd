@@ -10,6 +10,7 @@ if "%~1"=="-h" goto help
 if "%~1"=="build" goto build
 if "%~1"=="clean" goto clean
 if "%~1"=="commit" goto commit
+if "%~1"=="pack" goto pack
 
 
 :help
@@ -24,6 +25,8 @@ echo    commit  Will stage, commit and push every change into github!
 goto end
 
 :build
+REM if "%~2"=="" goto noargs
+set ARG=%~2
 call scripts/build.cmd
 goto end
 
@@ -35,6 +38,10 @@ goto end
 if "%~2"=="" goto noargs
 set ARG=%~2
 call scripts/commit.cmd
+goto end
+
+:pack
+call scripts/pack.cmd
 goto end
 
 :noargs

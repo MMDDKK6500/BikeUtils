@@ -5,6 +5,9 @@ using BikeUtils.Structs;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 
+/// <summary>
+/// A class containing utilities for Keycard related methods.
+/// </summary>
 public static class KeycardUtils
 {
     /// <summary>

@@ -4,6 +4,9 @@ using Exiled.API.Features;
 using PlayerRoles;
 using UnityEngine;
 
+/// <summary>
+/// A class containing utilities for the game's roles and classes.
+/// </summary>
 public static class RoleClassUtils
 {
     /// <summary>

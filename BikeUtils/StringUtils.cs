@@ -1,5 +1,8 @@
 ﻿namespace BikeUtils;
 
+/// <summary>
+/// A class containing utilities for strings.
+/// </summary>
 public static class StringUtils
 {
     /// <summary>
