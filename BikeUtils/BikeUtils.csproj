@@ -15,6 +15,7 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageReadmeFile>docs\README.md</PackageReadmeFile>
     <PackageIcon>images\icon.png</PackageIcon>
+    <Description>✨BikeUtils✨ is a lib made to help with the development of EXILED Plugins.</Description>
 
     <Copyright>Copyright © $(Authors) 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
     <RepositoryType>git</RepositoryType>
