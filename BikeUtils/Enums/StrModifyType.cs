@@ -1,4 +1,5 @@
-namespace BikeUtils.Enums;
+namespace BikeUtils.Structs;
+
 
 /// <summary>
 /// Types of string modification.
