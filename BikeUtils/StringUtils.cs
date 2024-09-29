@@ -1,24 +1,13 @@
 ﻿namespace BikeUtils;
 
-using Exiled.API.Features;
 using System.Text;
+using BikeUtils.Structs;
 
 /// <summary>
 /// A class containing utilities for strings.
 /// </summary>
 public static class StringUtils
 {
-    public enum StrModiType
-    {
-        Align,
-        Pos,
-        Voffset,
-        PosVoffset,
-        PosAlign,
-        VoffsetAlign,
-        PosVoffsetAlign
-    }
-
     /// <summary>
     /// Generate Automatically generates line breaks for lazy peoples.
     /// </summary>
@@ -34,6 +23,13 @@ public static class StringUtils
         return linebreak;
     }
 
+    /// <summary>
+    /// Adjusts the 
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="modify"></param>
+    /// <param name="quant"></param>
+    /// <returns></returns>
     public static string AdjustString(string text, StrModiType modify, int quant)
     {
         StringBuilder result = new StringBuilder();
