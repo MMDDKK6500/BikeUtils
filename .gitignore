@@ -423,5 +423,6 @@ obj/
 
 # include files for SCPSL and plugin dependencies
 include/
+References
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,csharp,dotnetcore
