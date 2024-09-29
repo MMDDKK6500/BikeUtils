@@ -1,48 +1,13 @@
 ﻿namespace BikeUtils;
 
-using Exiled.API.Features;
 using System.Text;
+using BikeUtils.Enums;
 
 /// <summary>
 /// A class containing utilities for strings.
 /// </summary>
 public static class StringUtils
 {
-    /// <summary>
-    /// A enum containing the types of modifications that can be applied to a string.
-    /// </summary>
-    public enum StrModiType
-    {
-        /// <summary>
-        /// Type to align the string.
-        /// </summary>
-        Align,
-        /// <summary>
-        /// Type to change the string's position.
-        /// </summary>
-        Pos,
-        /// <summary>
-        /// Type to change the vertical offset of the string.
-        /// </summary>
-        Voffset,
-        /// <summary>
-        /// Type to change the position and voffset.
-        /// </summary>
-        PosVoffset,
-        /// <summary>
-        /// Type to change position and align the text.
-        /// </summary>
-        PosAlign,
-        /// <summary>
-        /// Type to change the voffset and alignment.
-        /// </summary>
-        VoffsetAlign,
-        /// <summary>
-        /// Type to change all modifiers.
-        /// </summary>
-        PosVoffsetAlign
-    }
-
     /// <summary>
     /// Generate Automatically generates line breaks for lazy people.
     /// </summary>
@@ -58,7 +23,6 @@ public static class StringUtils
         return linebreak;
     }
 
-    /// <summary>
     /// Makes it easy to modify text with multiple lines.
     /// </summary>
     /// <param name="text">It's the text that's going to be changed.</param>
