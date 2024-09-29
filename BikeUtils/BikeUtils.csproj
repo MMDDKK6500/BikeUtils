@@ -14,6 +14,7 @@
     <Authors>MMDDKK6500, Bicicleta</Authors>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageReadmeFile>docs\README.md</PackageReadmeFile>
+    <PackageIcon>images\icon.png</PackageIcon>
 
     <Copyright>Copyright © $(Authors) 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
     <RepositoryType>git</RepositoryType>
@@ -52,6 +53,7 @@
     <None Include="$(EXILED_REFERENCES)\Assembly-CSharp.dll" Pack="true" PackagePath="lib\net48\" />
     <None Include="$(EXILED_REFERENCES)\Mirror.dll" Pack="true" PackagePath="lib\net48\" />
     <None Include="$(EXILED_REFERENCES)\UnityEngine.CoreModule.dll" Pack="true" PackagePath="lib\net48\" />
+    <None Include="..\assets\icon.png" Pack="true" PackagePath="images\" />
   </ItemGroup>
 
   <ItemGroup>
