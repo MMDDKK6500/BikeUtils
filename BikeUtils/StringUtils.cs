@@ -23,6 +23,7 @@ public static class StringUtils
         return linebreak;
     }
 
+    /// <summary>
     /// Makes it easy to modify text with multiple lines.
     /// </summary>
     /// <param name="text">It's the text that's going to be changed.</param>

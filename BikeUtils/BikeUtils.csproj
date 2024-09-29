@@ -48,11 +48,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EXILEDOFFICIAL" Version="8.12.2" />
+    <None Include="..\README.md" Pack="true" PackagePath="..\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="..\"/>
+    <PackageReference Include="EXILED-OFFICIAL" Version="8.12.2" />
   </ItemGroup>
 
 </Project>

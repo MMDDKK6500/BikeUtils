@@ -1,4 +1,4 @@
-namespace BikeUtils.Structs;
+namespace BikeUtils.Enums;
 
 
 /// <summary>

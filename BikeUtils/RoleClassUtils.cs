@@ -148,7 +148,7 @@ public static class RoleClassUtils
     }
 
     /// <summary>
-    /// Same thing as the other function, but now the boost variable increases all color channels
+    /// Same thing as the other function, but now the boost variable increases all color channels.
     /// </summary>
     /// <param name="color"><see cref="Color">Unity Color</see> object.</param>
     /// <param name="boost">All channels color boost.</param>
