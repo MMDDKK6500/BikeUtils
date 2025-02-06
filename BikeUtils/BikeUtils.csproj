@@ -10,7 +10,7 @@
 
   <PropertyGroup>
     <PackageId>BikeUtils</PackageId>
-    <PackageVersion>1.0.0-rc2</PackageVersion>
+    <PackageVersion>1.0.0-rc3</PackageVersion>
     <Authors>MMDDKK6500, Bicicleta</Authors>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageReadmeFile>docs\README.md</PackageReadmeFile>
