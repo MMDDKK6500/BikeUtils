@@ -35,10 +35,7 @@ public static class NPCUtils
         }
 
         GameObject newPlayer = Object.Instantiate(NetworkManager.singleton.playerPrefab);
-        Npc npc = new Npc(newPlayer)
-        { 
-            IsNPC = true 
-        };
+        Npc npc = new(newPlayer);
         try { npc.ReferenceHub.roleManager.InitializeNewRole(RoleTypeId.None, RoleChangeReason.RemoteAdmin); } catch { }
         int num = Random.Range(999, 999999);
         var fakeConnection = new FakeConnection(num++);
