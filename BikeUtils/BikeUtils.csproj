@@ -6,6 +6,7 @@
     <LangVersion>10</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>$(MSBuildThisFileDirectory)\..\bin\$(Configuration)\</OutputPath>
+    <EnablePackageValidation>true</EnablePackageValidation>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -22,6 +23,7 @@
     <RepositoryUrl>https://github.com/MMDDKK6500/BikeUtils</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MMDDKK6500/BikeUtils</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseFile>docs\LICENSE</PackageLicenseFile>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
@@ -34,7 +36,7 @@
   <!-- Disable warning about disabled generation of xml files on debug build -->
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);SA0001</NoWarn>
+    <NoWarn>$(NoWarn);SA0001;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -51,6 +53,7 @@
 
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="docs\" />
+    <None Include="LICENSE" Pack="true" PackagePath="docs\"/>
     <None Include="$(EXILED_REFERENCES)\Assembly-CSharp.dll" Pack="true" PackagePath="lib\net48\" />
     <None Include="$(EXILED_REFERENCES)\Mirror.dll" Pack="true" PackagePath="lib\net48\" />
     <None Include="$(EXILED_REFERENCES)\UnityEngine.CoreModule.dll" Pack="true" PackagePath="lib\net48\" />
