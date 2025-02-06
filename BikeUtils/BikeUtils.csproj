@@ -23,7 +23,6 @@
     <RepositoryUrl>https://github.com/MMDDKK6500/BikeUtils</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MMDDKK6500/BikeUtils</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageLicenseFile>docs\LICENSE</PackageLicenseFile>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
