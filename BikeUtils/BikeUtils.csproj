@@ -6,7 +6,6 @@
     <LangVersion>10</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>$(MSBuildThisFileDirectory)\..\bin\$(Configuration)\</OutputPath>
-    <EnablePackageValidation>true</EnablePackageValidation>
   </PropertyGroup>
 
   <PropertyGroup>
